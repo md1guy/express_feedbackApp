@@ -12,5 +12,8 @@
     "node-telegram-bot-api"
   ],
   "author": "md1guy",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
