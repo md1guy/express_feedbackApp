@@ -1,5 +1,5 @@
 function sendMessage() {
-    
+
     let xhr = new XMLHttpRequest();
 
     xhr.open('POST', '/sendFeedback', true);
