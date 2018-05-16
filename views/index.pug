@@ -1,7 +1,14 @@
-doctype html
-html
-  head
-    meta.charset= utf-8
-    title= title
-  body
-    h1= message
+extends layout
+
+block scripts
+    script(src='/javascripts/sendMessage.js')
+
+block content
+    div.parent
+        form(id='feedback_form', method='POST', onsubmit='return sendMessage()')
+            p 
+                input(type='text', name='name', id='name_field', placeholder='Your name..')
+            p
+                textarea(name='message', id='message_field', placeholder='Your message..')
+            p
+                input(type="submit", value="Submit")
