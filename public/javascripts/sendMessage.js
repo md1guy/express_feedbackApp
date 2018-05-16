@@ -6,10 +6,12 @@ function sendMessage() {
 
     xhr.send(JSON.stringify({
         name: document.getElementById('name_field').value,
+        email: document.getElementById('email_field').value,
         message: document.getElementById('message_field').value
     }));
 
     document.getElementById('name_field').value = '';
+    document.getElementById('email_field').value = '';
     document.getElementById('message_field').value = '';
 
     return false;
