@@ -8,6 +8,7 @@ const bot = new TelegramBot(TOKEN, {
 });
 
 function send(message, res) {
+
     if (message.name === "") message.name = "name";
     if (message.email === "") message.email = "email";
     if (message.message === "") message.message = "message";
