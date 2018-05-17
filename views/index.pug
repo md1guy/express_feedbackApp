@@ -1,16 +1,17 @@
 extends layout
 
 block scripts
+    script(src='/javascripts/sweetalert.min.js')
     script(src='/javascripts/sendMessage.js')
 
 block content
     div.parent
         form(id='feedback_form', method='POST', onsubmit='return sendMessage()')
             p 
-                input(type='text', name='name', id='name_field', placeholder='Name..')
+                input(type='text', name='name', id='name_field', placeholder='Name (required)')
             p 
-                input(type='text', name='email', id='email_field', placeholder='E-mail..')
+                input(type='text', name='email', id='email_field', placeholder='E-mail')
             p
-                textarea(name='message', id='message_field', placeholder='Message..')
+                textarea(name='message', id='message_field', placeholder='Message (required)')
             p
                 input(type="submit", value="Submit")
