@@ -1,12 +1,5 @@
 function sendMessage() {
 
-    if (document.getElementById('message_field').value.length > 2000) {
-
-        swal("Oops!", "Your message can't be longer than 2000 symbols.", "error");
-
-        return false;
-    }
-
     let xhr = new XMLHttpRequest();
 
     try {
@@ -23,16 +16,23 @@ function sendMessage() {
             return false;
         }
 
+        if(name.length > 25) {
+
+            swal('Oops! Too long name!', 'Name can\'t be longer than 25 symbols.', 'error');
+
+            return false;
+        }
+
         if(!validateEmail(email) && email != '') {
 
-            swal('Oops!', 'Invalid e-mail format. You may leave this field empty.', 'error');
+            swal('Oops! Invalid e-mail format!', 'You may leave this field empty.', 'error');
 
             return false;
         }
 
         if (message.length > 2000) {
 
-            swal("Oops!", "Your message can't be longer than 2000 symbols.", "error");
+            swal("Oops! Too long message!", 'Your message can\'t be longer than 2000 symbols.', 'error');
     
             return false;
         } 
@@ -64,6 +64,6 @@ function sendMessage() {
 }
 
 function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
