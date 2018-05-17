@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
 router.get('/', (req, res, next) => {
+    res.redirect('/feedback');
+});
+
+router.get('/feedback', (req, res, next) => {
     res.render('index', {
         title: 'Feedback'
     });

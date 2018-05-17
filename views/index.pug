@@ -1,9 +1,5 @@
 extends layout
 
-block scripts
-    script(src='/javascripts/sweetalert.min.js')
-    script(src='/javascripts/sendMessage.js')
-
 block content
     div.parent
         form(id='feedback_form', method='POST', onsubmit='return sendMessage()')
@@ -15,3 +11,6 @@ block content
                 textarea(name='message', id='message_field', placeholder='Message (required)')
             p
                 input(type="submit", value="Submit")
+
+block scripts
+    script(src='/javascripts/sendMessage.js')
