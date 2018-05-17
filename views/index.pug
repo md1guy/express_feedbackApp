@@ -4,11 +4,11 @@ block content
     div.parent
         form(id='feedback_form', method='POST', onsubmit='return sendMessage()')
             p 
-                input(type='text', name='name', id='name_field', placeholder='Name (required)')
+                input(type='text', name='name', id='name_field', placeholder='Name..')
             p 
-                input(type='email', name='email', id='email_field', placeholder='E-mail')
+                input(type='email', name='email', id='email_field', placeholder='E-mail (optional)')
             p
-                textarea(name='message', id='message_field', placeholder='Message (required)')
+                textarea(name='message', id='message_field', placeholder='Message..')
             p
                 input(type="submit", value="Submit")
 
