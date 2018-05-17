@@ -25,7 +25,7 @@ function sendMessage() {
 
         if(!validateEmail(email) && email != '') {
 
-            swal('Oops! Invalid e-mail format!', 'You may leave this field empty.', 'error');
+            swal('Oops! Invalid e-mail format!', 'You may leave this field empty if you want.', 'error');
 
             return false;
         }
