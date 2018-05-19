@@ -33,7 +33,7 @@
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    color: #BFD2FF;
+    color: rgb(209, 205, 226);
   }
   
   .parent {
@@ -80,8 +80,7 @@
     background: rgba(57, 63, 84, 0.8);
     border-style: none; 
     outline: none;
-    border-bottom: 2px solid;
-    border-color: rgb(223, 220, 230);
+    border-bottom: 2px solid rgb(209, 205, 226);
     font-size: 1rem;
     color: #BFD2FF;
   }
