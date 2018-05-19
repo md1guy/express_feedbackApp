@@ -38,7 +38,7 @@
   
   .parent {
     margin: auto; 
-    border-radius: 1%;
+    border-radius: 2px;
     background-color: #e0e0e0;
     padding: 15px;
     width: 20%;
@@ -93,4 +93,6 @@
     max-height: 70vh;
     font-size: 1.2rem;
   }
+
+  /* TODO: optimize layout for mobile browsers */
   
