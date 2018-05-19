@@ -1,13 +1,23 @@
 * {
     box-sizing: border-box
   } 
+
+  @font-face {
+    font-family: 'Simplifica';
+    src:url('/fonts/Simplifica.ttf.woff') format('woff'),   
+    url('/fonts/Simplifica.ttf.svg#Simplifica') format('svg'),        
+    url('/fonts/Simplifica.ttf.eot'),           
+    url('fonts/Simplifica.ttf.eot?#iefix') format('embedded-opentype');        
+    font-weight: normal;      
+    font-style: normal; 
+  }
   
   html,
   body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-image: url("/images/background.jpg");
+    background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -15,6 +25,14 @@
   body {
     display: flex;
     font-family: 'Cabin';
+  }
+
+  .header {
+    font-family: 'Simplifica';
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #BFD2FF;
   }
   
   .parent {
@@ -32,29 +50,46 @@
   }
   
   input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
     padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     float: right;
+    background: rgb(102, 110, 138);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #1d1f29;
+    border: 2px solid #1d1f29;
+    font-family:'Roboto',sans-serif;
   }
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    text-shadow: 0 0 2em rgba(255,255,255,1);
   }
 
   input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 12px 20px;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 2px;
     resize: vertical;
+    background: rgba(57, 63, 84, 0.8);
+    border-style: none; 
+    outline: none;
+    border-bottom: 2px solid;
+    border-color: rgb(223, 220, 230);
+    font-size: 1rem;
+    color: #BFD2FF;
   }
+
+  ::placeholder {
+    color: #7881A1;
+    opacity: 1; /* Firefox */
+}
   
   textarea {
     min-height: 300px;
-    max-height: 75vh;
+    max-height: 70vh;
+    font-size: 1.2rem;
   }
   
