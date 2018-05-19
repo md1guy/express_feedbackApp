@@ -57,15 +57,18 @@
     float: right;
     background: rgb(102, 110, 138);
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: normal;
-    font-size: 1.1rem;
-    color: #1d1f29;
-    border: 2px solid #1d1f29;
-    font-family:'Roboto',sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(0, 34, 34);
+    border-style: none;
+    border-bottom: 2px solid rgb(102, 110, 138);
+    font-family:'Dosis', sans-serif;
+    text-transform: uppercase;
   }
   
   input[type=submit]:hover {
-    text-shadow: 0 0 2em rgba(255,255,255,1);
+    border-bottom: 2px solid rgb(209, 205, 226);
+    color: rgb(209, 205, 226);
   }
 
   input[type=text], input[type=email], select, textarea {
