@@ -43,7 +43,7 @@
     padding: 15px;
     width: 20%;
     min-width: 300px;
-    background: rgba(0,34,34,.5);
+    background: rgba(0, 34, 34, 0);
   }
   
   input {
@@ -91,7 +91,7 @@
 }
   
   textarea {
-    min-height: 300px;
+    min-height: 40vh;
     max-height: 70vh;
     font-size: 1.2rem;
   }
