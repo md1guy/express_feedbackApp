@@ -77,7 +77,7 @@
     border: 2px solid #ccc;
     border-radius: 2px;
     resize: vertical;
-    background: rgba(57, 63, 84, 0.5);
+    background: rgba(57, 63, 84, 0.7);
     border-style: none; 
     outline: none;
     border-bottom: 2px solid rgb(209, 205, 226);
@@ -86,7 +86,7 @@
   }
 
   input[type=text]:focus, input[type=email]:focus, textarea:focus {
-    background: rgb(57, 63, 84, 0.7);
+    background: rgb(57, 63, 84, 0.9);
   }
 
   ::placeholder {
