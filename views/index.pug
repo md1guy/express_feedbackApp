@@ -1,8 +1,9 @@
 extends layout
 
 block content
-    div.parent
+    .parent
         form(id='feedback_form', method='POST', onsubmit='return sendMessage()')
+            .header - Contact me -
             p 
                 input(type='text', name='name', id='name_field', placeholder='Name..')
             p 
@@ -10,7 +11,7 @@ block content
             p
                 textarea(name='message', id='message_field', placeholder='Message..')
             p
-                input(type="submit", value="Submit")
+                input(type="submit", value="Send")
 
 block scripts
     script(src='/javascripts/sendMessage.js')

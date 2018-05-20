@@ -1,14 +1,25 @@
 * {
     box-sizing: border-box
   } 
+
+  @font-face {
+    font-family: 'Simplifica';
+    src:url('/fonts/Simplifica.ttf.woff') format('woff'),   
+    url('/fonts/Simplifica.ttf.svg#Simplifica') format('svg'),        
+    url('/fonts/Simplifica.ttf.eot'),           
+    url('fonts/Simplifica.ttf.eot?#iefix') format('embedded-opentype');        
+    font-weight: normal;      
+    font-style: normal; 
+  }
   
   html,
   body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-image: url("/images/background.jpg");
+    background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
   
@@ -16,15 +27,23 @@
     display: flex;
     font-family: 'Cabin';
   }
+
+  .header {
+    font-family: 'Simplifica';
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(209, 205, 226);
+  }
   
   .parent {
     margin: auto; 
-    border-radius: 1%;
+    border-radius: 2px;
     background-color: #e0e0e0;
     padding: 15px;
     width: 20%;
-    min-width: 300px;
-    background: rgba(0,34,34,.5);
+    min-width: 400px;
+    background: rgba(0, 34, 34, 0);
   }
   
   input {
@@ -32,29 +51,67 @@
   }
   
   input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
     padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     float: right;
+    background: rgb(102, 110, 138);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(0, 34, 34);
+    border-style: none;
+    border-bottom: 2px solid rgb(102, 110, 138);
+    font-family:'Dosis', sans-serif;
+    text-transform: uppercase;
   }
   
-  input[type=submit]:hover {
-    background-color: #45a049;
+  input[type=submit]:hover, input[type=submit]:focus {
+    border-bottom: 2px solid rgb(209, 205, 226);
+    color: rgb(209, 205, 226);
   }
 
   input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 12px 20px;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 2px;
     resize: vertical;
+    background: rgba(57, 63, 84, 0.7);
+    border-style: none; 
+    outline: none;
+    border-bottom: 2px solid rgb(209, 205, 226);
+    font-size: 1rem;
+    color: #BFD2FF;
   }
+
+  input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    background: rgb(57, 63, 84, 0.9);
+  }
+
+  ::placeholder {
+    color: #7881A1;
+    opacity: 1; /* Firefox */
+}
   
   textarea {
-    min-height: 300px;
-    max-height: 75vh;
+    min-height: 47vh;
+    max-height: 70vh;
+    font-size: 1.2rem;
   }
+
+  @media only screen and (max-width: 600px) {
+    textarea {
+      min-height: 40vh;
+      max-height: 70vh;
+      font-size: 1.2rem;
+    }
+
+    .parent {
+      width: 20%;
+      min-width: 300px;
+    }
+  } 
+
+  /* TODO: optimize layout for mobile browsers */
   

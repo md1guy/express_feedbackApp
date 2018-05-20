@@ -11,10 +11,10 @@ const bot = new TelegramBot(TOKEN, {
 function send(message, res) {
 
     if (message.name === "") message.name = "name";
-    if (message.email === "") message.email = "email";
+    if (message.email === "") message.email = "E-Mail";
     if (message.message === "") message.message = "message";
 
-    bot.sendMessage(ID, `${message.name}(${message.email}):\n${message.message}`)
+    bot.sendMessage(ID, `${message.name} (${message.email}):\n\n${message.message}`)
         .then(console.log(`${message.name} successfully sent message: ${message.message}`))
         .catch((error) => {
             console.error(error.code); // => 'ETELEGRAM'
