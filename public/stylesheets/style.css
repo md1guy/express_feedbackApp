@@ -100,5 +100,18 @@
     font-size: 1.2rem;
   }
 
+  @media only screen and (max-width: 600px) {
+    textarea {
+      min-height: 40vh;
+      max-height: 70vh;
+      font-size: 1.2rem;
+    }
+
+    .parent {
+      width: 20%;
+      min-width: 300px;
+    }
+  } 
+
   /* TODO: optimize layout for mobile browsers */
   
