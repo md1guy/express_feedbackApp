@@ -66,7 +66,7 @@
     text-transform: uppercase;
   }
   
-  input[type=submit]:hover {
+  input[type=submit]:hover, input[type=submit]:focus {
     border-bottom: 2px solid rgb(209, 205, 226);
     color: rgb(209, 205, 226);
   }
@@ -77,12 +77,16 @@
     border: 2px solid #ccc;
     border-radius: 2px;
     resize: vertical;
-    background: rgba(57, 63, 84, 0.8);
+    background: rgba(57, 63, 84, 0.5);
     border-style: none; 
     outline: none;
     border-bottom: 2px solid rgb(209, 205, 226);
     font-size: 1rem;
     color: #BFD2FF;
+  }
+
+  input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    background: rgb(57, 63, 84, 0.7);
   }
 
   ::placeholder {
